@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Aqualand App</string>
+
+    <string name="suhu_title">Keterangan Suhu</string>
+    <string name="jadwal_title">Keterangan Jadwal Pakan</string>
+    <string name="kuras_title">Keterangan Kuras</string>
+    <string name="kamera_title">Keterangan Kamera</string>
+
+    <string name="ket_suhu">
+        Satuan suhu - derajat celcius \n\nLimit Min - suhu ideal pada akuarium (20-25) \n\nLimit Max - batas suhu bahaya pada akuarium
+    </string>
+    <string name="ket_jadwal">
+        Format waktu 24 jam \n\n    ~ hh (jam) \n\n    ~ mm (menit) \n\n    ~ ss (detik) \n\nPembuatan jadwal berlaku untuk hari berikutnya
+    </string>
+    <string name="ket_kuras">
+        Tombol kuras dapat membuka kran pada akuarium dan akan menutup secara otomatis ketika penggurasan sudah selesai
+    </string>
+    <string name="ket_kamera">
+        Tombol kamera dapat mengambil gambar pada akuarium dan akan ditampilkan pada menu kamera
+    </string>
+
+    <string name="o_suhu">okay</string>
+    <string name="o_jadwal">okay</string>
+    <string name="o_kamera">okay</string>
+    <string name="o_kuras">okay</string>
+
+</resources>

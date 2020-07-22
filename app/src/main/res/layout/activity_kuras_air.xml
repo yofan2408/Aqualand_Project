@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgkuras"
+    tools:context=".KurasAir">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:onClick="Kembalikuras"
+        android:src="@drawable/kembali_hitam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/countdown_txt"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="90dp"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="0 Detik"
+        android:visibility="visible"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/countdown2_txt"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="90dp"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:text="Katup Tertutup"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/button_background"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Kuras"
+        app:layout_constraintStart_toStartOf="@+id/ket_kuras"
+        app:layout_constraintEnd_toEndOf="@+id/ket_kuras"
+        app:layout_constraintBottom_toTopOf="@+id/ket_kuras"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ket_kuras"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:text="Keterangan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="23dp"
+            android:text="Kuras Akuarium"
+            android:textColor="@color/hitam"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_marginLeft="218dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/button_popup_background2"
+                android:paddingRight="5dp"
+                android:paddingLeft="15dp"
+                android:src="@drawable/ic_popup_suhu"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

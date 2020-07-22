@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#16bbe9</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorSucces">#4BB543</color>
+    <color name="colorWarning">#FFCC00</color>
+    <color name="colorNeutral">#434343</color>
+    <color name="colorError">#CC0000</color>
+    <color name="colortTextPrimary">#212121</color>
+
+    <color name="birulaut">#0b69ff</color>
+    <color name="birulaut2">#16bbe9</color>
+    <color name="birulaut3">#0f60ca</color>
+    <color name="lightgray">#ededed</color>
+    <color name="merah">#de4c65</color>
+    <color name="putih">#FFFFFF</color>
+    <color name="hitam">#000000</color>
+    <color name="grayLight">#aeaeae</color>
+
+</resources>

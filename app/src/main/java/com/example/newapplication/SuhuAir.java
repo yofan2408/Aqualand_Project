@@ -59,6 +59,8 @@ public class SuhuAir extends AppCompatActivity {
     LineData lineData;
     SimpleDateFormat simpleDateFormat;
 
+    String zero = String.valueOf(0);
+    String defaultValue = zero + degreePattern;
 
     static Float degree = 0f;
     static String date = "";
@@ -155,6 +157,7 @@ public class SuhuAir extends AppCompatActivity {
             public void onClick(View v) {
                 if (v.getId() == R.id.btn_delete) {
                     dref.removeValue();
+                    suhu.setText(defaultValue);
                 }
             }
         });
@@ -176,6 +179,10 @@ public class SuhuAir extends AppCompatActivity {
                     for (DataSnapshot myDataSnapshot : dataSnapshot.getChildren()) {
                         float dataPoint = myDataSnapshot.getValue(Float.class);
                         float yVal = (float) dataPoint;
+
+                        String descSuhu = String.valueOf(dataPoint);
+                        String desc = descSuhu + degreePattern;
+                        suhu.setText(desc);
 
 
                         dataVals.add(new Entry((float) xAxis, yVal));
@@ -203,10 +210,6 @@ public class SuhuAir extends AppCompatActivity {
                     dataSnapshot.getRef().removeValue();
                     lineChart.invalidate();
                 }
-
-
-//                status = dataSnapshot.child("suhu").getValue().toString();
-//                suhu.setText(status + " C");
             }
 
 
@@ -221,8 +224,8 @@ public class SuhuAir extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
         dref.removeValue();
+        suhu.setText(defaultValue);
     }
 
 

@@ -10,11 +10,10 @@
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/line_chart"
         android:layout_width="match_parent"
-        android:layout_height="340dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="320dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <LinearLayout
         android:id="@+id/linear_layout"
@@ -29,17 +28,17 @@
 
         <Button
             android:id="@+id/btn_history"
-            android:background="@drawable/button_background"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
+            android:background="@drawable/button_background"
             android:text="Riwayat" />
 
         <Button
             android:id="@+id/btn_delete"
-            android:background="@drawable/button_background"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
             android:text="Hapus" />
     </LinearLayout>
 
@@ -95,6 +94,7 @@
     </androidx.cardview.widget.CardView>
 
     <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -106,9 +106,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="100dp"
+        android:id="@+id/cardView"
+        android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toTopOf="@+id/ket_suhu"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +122,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="30"
             android:textSize="28sp" />
 
     </androidx.cardview.widget.CardView>

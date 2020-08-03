@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecyclerRiwayatSuhu"></activity>
+        <activity android:name=".ui.HistoryActivity"></activity>
+        <activity android:name=".RecyclerRiwayatSuhu" />
         <activity android:name=".JadwalPakan" />
         <activity android:name=".Tentang" />
         <activity android:name=".KurasAir" />

@@ -52,15 +52,34 @@ public class Kamera extends AppCompatActivity {
         txt=findViewById(R.id.txtkamera);
         img=findViewById(R.id.imgkamera);
 
+
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("cap");
                 myRef.setValue(String.valueOf(1));
+
+                childernreff.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                        String message=snapshot.child("photo").getValue(String.class);
+                        txt.setText(message);
+
+                        if(!message.isEmpty()) {
+                            Picasso.get().load(message).into(img);
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
             }
         });
-
     }
 
 
@@ -69,6 +88,7 @@ public class Kamera extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
+
     @Override
     public void finish() {
         super.finish();
@@ -78,22 +98,6 @@ public class Kamera extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        childernreff.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String message=snapshot.child("photo").getValue(String.class);
-                txt.setText(message);
-                if(!message.isEmpty()) {
-                    Picasso.get().load(message).into(img);
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
     }
 
     private void showKameraDialog() {
